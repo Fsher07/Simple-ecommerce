@@ -26,11 +26,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Eteration <a name="about-project"></a>
+# 📖 Eteration project <a name="about-project"></a>
 
-> It is a simple e-commerce web design.
-
-**E-commerce** is a...
+**Eteration project** is a simple e-commerce web design.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -52,7 +50,15 @@
 
 > This is live demo to play around:
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://simple-ecommerce-xi.vercel.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Video Present <a name="live-demo"></a>
+
+- [Video Link](https://www.loom.com/share/18775729cd9c451ca5ca406ce2649c76)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,7 +106,7 @@ To run tests, run the following command:
 
 ## 👥 Author <a name="authors"></a>
 
-- GitHub: [@githubhandle](https://github.com/Fsher07)
+- GitHub: [Github](https://github.com/Fsher07)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/fsalimhidir/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
