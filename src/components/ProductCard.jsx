@@ -8,8 +8,6 @@ import styles from "./ProductCard.module.css";
 const ProductCard = ({ img, price, name, brand, product }) => {
   const dispatch = useDispatch();
 
-  console.log("!", product);
-
   const handleAddToCart = () => {
     dispatch(addItemToCart(product));
   };
