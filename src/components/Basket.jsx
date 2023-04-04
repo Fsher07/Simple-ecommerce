@@ -27,33 +27,55 @@ const Basket = () => {
 
   const totalPrice = selectBasketTotalPrice(items);
   return (
-    <div>
-      <p>Cart</p>
-      {items.length === 0 ? (
-        <p>Your cart is empty.</p>
-      ) : (
-        <ul>
-          {items.map((item) => (
-            <li className={styles.row} key={item.id}>
-              <button
-                className={styles.button}
-                onClick={() => handleAddItem(item.id)}
-              >
-                +
-              </button>
-              {item.name} - {item.quantity}{" "}
-              <button
-                className={styles.button}
-                onClick={() => handleRemoveItem(item.id)}
-              >
-                -
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-      <p>Checkout</p>
-      <p>{totalPrice}</p>
+    <div className={styles.layout}>
+      <div className={styles.container}>
+        {items.length === 0 ? (
+          <p>Your cart is empty.</p>
+        ) : (
+          <ul className={styles.basketList}>
+            {items.map((item) => (
+              <li className={styles.row} key={item.id}>
+                <div>
+                  <p>{item.name}</p>
+                  <p className={styles.price}>
+                    {Number(item.price).toLocaleString("tr-TR", {
+                      style: "currency",
+                      currency: "TRY",
+                    })}
+                  </p>
+                </div>
+                <div className={styles.quantityRow}>
+                  <button
+                    className={styles.button}
+                    onClick={() => handleAddItem(item.id)}
+                  >
+                    +
+                  </button>
+                  <span className={styles.quantity}>{item.quantity}</span>
+                  <button
+                    className={styles.button}
+                    onClick={() => handleRemoveItem(item.id)}
+                  >
+                    -
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <div className={styles.containerCheckOut}>
+        <p>
+          Total Price:{" "}
+          <span className={styles.price}>
+            {totalPrice.toLocaleString("tr-TR", {
+              style: "currency",
+              currency: "TRY",
+            })}
+          </span>
+        </p>
+        <button className={styles.buttonCheckOut}>Checkout</button>
+      </div>
     </div>
   );
 };

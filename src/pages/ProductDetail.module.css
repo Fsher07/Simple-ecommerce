@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  padding: 1rem 2rem 2rem 1rem;
+  max-width: 1200px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.price {
+  color: var(--global-blue);
+}
+
+.button {
+  font-size: 1rem;
+  padding: 0.3rem 1.5rem;
+  outline: none;
+  border: 2px solid transparent;
+  color: #fff;
+  background-color: var(--global-blue);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.15s;
+}
+
+.buttonGoBack {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--global-blue);
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 1600px) {
+  .container {
+    padding-right: 1rem;
+    max-width: 1000px;
+  }
+}

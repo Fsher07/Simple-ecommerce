@@ -1,22 +1,26 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import ProductList from "./components/ProductList";
 import Basket from "./components/Basket";
-import FilterArea from "./components/FilterArea";
+import ProductDetail from "./pages/ProductDetail";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <div className="app-container">
-        <FilterArea />
-        <Home />
-        <Basket />
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="app-container">
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/detail/:productId" element={<ProductDetail />} />
+          </Routes>
+          <Basket />
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

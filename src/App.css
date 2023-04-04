@@ -1,5 +1,15 @@
 .app-container {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 5rem;
   padding-left: 10%;
   padding-right: 10%;
+}
+
+@media screen and (max-width: 1600px) {
+  .app-container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
 }
